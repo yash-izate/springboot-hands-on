@@ -1,14 +1,24 @@
 package com.xtreme.firstspringproject;
 
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 public class HelloController {
 
     @GetMapping("/hello")
-    public String hello() {
-        return "Hello World!";
+    public HelloResponse hello() {
+        return new HelloResponse("Hello World! It's my first SpringBoot App.");
+    }
+
+    @GetMapping("/hello/{name}")
+    public HelloResponse helloYash(@PathVariable String name) {
+        return new HelloResponse("Hello " + name + "!");
+    }
+
+
+    @PostMapping("/hello")
+    public String helloPost(@RequestBody String name) {
+        return "Hello " + name + "!";
     }
 
 }
