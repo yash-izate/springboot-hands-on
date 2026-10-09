@@ -1,4 +1,4 @@
-package org.xtreme.firstspringproject;
+package com.xtreme.firstspringproject;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
