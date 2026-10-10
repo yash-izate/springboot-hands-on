@@ -10,4 +10,4 @@ public class FirstSpringProjectApplication {
         SpringApplication.run(FirstSpringProjectApplication.class, args);
     }
 
-}
+} 
