@@ -15,10 +15,21 @@ public class HelloController {
         return new HelloResponse("Hello " + name + "!");
     }
 
-
     @PostMapping("/hello")
     public String helloPost(@RequestBody String name) {
         return "Hello " + name + "!";
     }
+
+    @GetMapping("/bank/home")
+    public HelloResponse bankHome() {
+        return new HelloResponse("Welcome to the Banking Home page.");
+    }
+
+    @PostMapping("bank/home/{name}")
+    public String bankPost(@PathVariable @RequestBody String name) {
+        return "Hello, " + name + "! Welcome to Banking Home page.";
+    }
+
+
 
 }
